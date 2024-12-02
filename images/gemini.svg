@@ -1,0 +1,13 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4285f4">
+        <animate attributeName="stop-color" values="#4285f4; #d96570; #1BA1E3; #4285f4" dur="3s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#d96570">
+        <animate attributeName="stop-color" values="#d96570; #1BA1E3; #4285f4; #d96570" dur="3s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+  </defs>
+  <polygon points="100,10 120,70 180,70 130,110 150,170 100,130 50,170 70,110 20,70 80,70" fill="url(#animatedGradient)"/>
+</svg>
