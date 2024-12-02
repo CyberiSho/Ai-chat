@@ -8,9 +8,9 @@ const deleteChatButton = document.querySelector("#delete-chat-button");
 let userMessage = null;
 let isResponseGenerating = false;
 
-// API configuration
-const API_KEY = "AIzaSyCC3BA-EIRSGOt6iXEFM09dpyELqXzrL0U"; // Your API key here
-const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-pro:generateContent?key=${API_KEY}`;
+// API configuration for Groq
+const GROQ_API_KEY = "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"; // Replace with your actual Groq API key
+const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
 // Load theme and chat data from local storage on page load
 const loadDataFromLocalstorage = () => {
@@ -57,28 +57,32 @@ const showTypingEffect = (text, textElement, incomingMessageDiv) => {
   }, 75);
 }
 
-// Fetch response from the API based on user message
+// Fetch response from the Groq API based on user message
 const generateAPIResponse = async (incomingMessageDiv) => {
   const textElement = incomingMessageDiv.querySelector(".text"); // Getting text element
 
   try {
-    // Send a POST request to the API with the user's message
+    // Send a POST request to the Groq API with the user's message
     const response = await fetch(API_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ 
-        contents: [{ 
-          role: "user", 
-          parts: [{ text: userMessage }] 
-        }] 
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${GROQ_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "llama3-8b-8192",
+        messages: [{
+          role: "user",
+          content: userMessage,
+        }],
       }),
     });
 
     const data = await response.json();
     if (!response.ok) throw new Error(data.error.message);
 
-    // Get the API response text and remove asterisks from it
-    const apiResponse = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1");
+    // Get the API response text
+    const apiResponse = data.choices[0].message.content;
     showTypingEffect(apiResponse, textElement, incomingMessageDiv); // Show typing effect
   } catch (error) { // Handle error
     isResponseGenerating = false;
@@ -92,7 +96,7 @@ const generateAPIResponse = async (incomingMessageDiv) => {
 // Show a loading animation while waiting for the API response
 const showLoadingAnimation = () => {
   const html = `<div class="message-content">
-                  <img class="avatar" src="images/bot.svg" alt="Gemini avatar">
+                  <img class="avatar" src="images/gemini.svg" alt="Gemini avatar">
                   <p class="text"></p>
                   <div class="loading-indicator">
                     <div class="loading-bar"></div>
