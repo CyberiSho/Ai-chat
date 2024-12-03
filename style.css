@@ -455,15 +455,15 @@ pre code {
 
 
 .disclaimer-text {
-  font-size: 1.2rem; /* تنظیم سایز متن */
-  font-weight: bold; /* متن ضخیم‌تر */
-  text-align: center; /* متن وسط چین */
-  background: linear-gradient(90deg, #4285f4, #d96570, #1BA1E3, #4285f4); /* گرادیان رنگی */
-  background-size: 200% 200%; /* حرکت گرادیانت */
-  -webkit-background-clip: text; /* تنظیم برای استفاده از گرادیانت روی متن */
-  background-clip: text; /* برای مرورگرهای دیگر */
-  -webkit-text-fill-color: transparent; /* رنگ متن شفاف برای نشان دادن گرادیانت */
-  animation: gradientAnimation 3s ease infinite; /* انیمیشن متحرک */
+  font-size: 1.2rem; 
+  font-weight: bold; 
+  text-align: center;
+  background: linear-gradient(90deg, #4285f4, #d96570, #1BA1E3, #4285f4); 
+  background-size: 200% 200%; 
+  -webkit-background-clip: text;
+  background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  animation: gradientAnimation 3s ease infinite; 
 }
 
 @keyframes gradientAnimation {
