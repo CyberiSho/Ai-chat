@@ -19,7 +19,6 @@
 }
 
 .light_mode {
-  /* Light mode colors */
   --text-color: #222;
   --subheading-color: #A0A0A0;
   --placeholder-color: #6C6C6C;
@@ -47,6 +46,7 @@ body.hide-header .header {
   margin: 0;
   display: none;
 }
+
 
 .header :where(.title, .subtitle) {
   color: var(--text-color);
@@ -208,10 +208,23 @@ body.hide-header .header {
   height: 11px;
   width: 100%;
   border-radius: 0.135rem;
-  background-position: -800px 0;
-  background: linear-gradient(to right, #4285f4, var(--primary-color), #4285f4);
-  animation: loading 3s linear infinite;
+  background: linear-gradient(90deg, #4285f4, #d96570, #1BA1E3);
+  background-size: 200% 200%;
+  animation: loadingGradient 3s linear infinite;
 }
+
+@keyframes loadingGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 .chat-list .message .loading-indicator .loading-bar:last-child {
   width: 70%;
@@ -254,6 +267,7 @@ body.hide-header .header {
   border: none;
   outline: none;
   resize: none;
+  border-radius: 20px;
   font-size: 1rem;
   color: var(--text-color);
   padding: 1.1rem 4rem 1.1rem 1.5rem;
@@ -373,6 +387,82 @@ body.hide-header .header {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 3s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+code {
+  background-color: #f4f4f4;  
+  border-radius: 3px;       
+  padding: 0.2em 0.4em;      
+  font-family: "Courier New", monospace; 
+  font-size: 1.1em;           
+  color: #d6336c;             
+}
+
+.chat-list .message .text {
+  color: var(--text-color);
+  white-space: pre-wrap;
+  overflow-x: auto; 
+}
+
+pre code {
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: monospace;
+  overflow-x: auto;
+  white-space: pre-wrap; /* Preserve formatting */
+}
+
+
+.suggestion .text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #4285f4, #d96570, #1BA1E3);
+  background-size: 200% 200%; /
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 3s ease infinite; 
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.disclaimer-text {
+  font-size: 1.2rem; 
+  font-weight: bold; 
+  text-align: center;
+  background: linear-gradient(90deg,
+  background-size: 200% 200%;
+  -webkit-background-clip: text; 
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
   animation: gradientAnimation 3s ease infinite;
 }
 
