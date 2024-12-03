@@ -1,1 +1,201 @@
-function _0x4ce0(_0x5a63d7,_0x480a49){const _0x2062c6=_0x2062();return _0x4ce0=function(_0x4ce03e,_0x55c9be){_0x4ce03e=_0x4ce03e-0xcb;let _0x40659e=_0x2062c6[_0x4ce03e];return _0x40659e;},_0x4ce0(_0x5a63d7,_0x480a49);}function _0x2062(){const _0x1913ea=['llama3-8b-8192','reset','scroll','querySelector','done','addEventListener','1504705wRhYYw','message','add','.typing-input','removeItem','18idHhNY','1293516DtyKmh','Are\x20you\x20sure\x20you\x20want\x20to\x20delete\x20all\x20the\x20chats?','loading','user','3222120xfaXtO','click','submit','6VpToaF','.text','dark_mode','closest','scrollHeight','error','trim','split','choices','<div\x20class=\x22message-content\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20class=\x22avatar\x22\x20src=\x22images/user.svg\x22\x20alt=\x22User\x20avatar\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22text\x22></p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','length','https://api.groq.com/openai/v1/chat/completions','.suggestion','remove','outgoing','1021643UIKZFt','45lDzPOl','innerText','DOMContentLoaded','div','.icon','preventDefault','10874920vfWBEf','saved-chats','content_copy','clientHeight','appendChild','parentElement','content','scrollTo','<strong>$1</strong>','setItem','classList','#delete-chat-button','getItem','application/json','light_mode','1234970TzqfSN','315280UVEFmU','querySelectorAll','incoming','innerHTML','toggle','forEach','body','hide','writeText','themeColor'];_0x2062=function(){return _0x1913ea;};return _0x2062();}const _0x54aae6=_0x4ce0;(function(_0x5b31dd,_0x454c67){const _0x5990a9=_0x4ce0,_0x55ab6e=_0x5b31dd();while(!![]){try{const _0x2a765d=parseInt(_0x5990a9(0xf8))/0x1+parseInt(_0x5990a9(0xcc))/0x2+parseInt(_0x5990a9(0xe3))/0x3*(parseInt(_0x5990a9(0xf9))/0x4)+parseInt(_0x5990a9(0x109))/0x5+parseInt(_0x5990a9(0xd3))/0x6*(-parseInt(_0x5990a9(0xe2))/0x7)+-parseInt(_0x5990a9(0xd0))/0x8+-parseInt(_0x5990a9(0xcb))/0x9*(parseInt(_0x5990a9(0xe9))/0xa);if(_0x2a765d===_0x454c67)break;else _0x55ab6e['push'](_0x55ab6e['shift']());}catch(_0x538f30){_0x55ab6e['push'](_0x55ab6e['shift']());}}}(_0x2062,0x9c8f7),document[_0x54aae6(0x108)](_0x54aae6(0xe5),()=>{const _0x19364f=_0x54aae6,_0xfb8def=document['querySelector']('.typing-form'),_0x54dddb=document[_0x19364f(0x106)]('.chat-list'),_0x5b4a95=document[_0x19364f(0xfa)](_0x19364f(0xdf)),_0x5ea960=document['querySelector']('#theme-toggle-button'),_0x5578c7=document['querySelector'](_0x19364f(0xf4));let _0x49da82=null,_0x383cd4=![],_0xc61148=![];const _0x5c3310='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',_0xccc5b8=_0x19364f(0xde),_0x288da9=()=>{const _0x2d9506=_0x19364f,_0x544d92=localStorage['getItem'](_0x2d9506(0xea)),_0x58c5d0=localStorage[_0x2d9506(0xf5)]('themeColor')===_0x2d9506(0xf7);document[_0x2d9506(0xff)]['classList'][_0x2d9506(0xfd)](_0x2d9506(0xf7),_0x58c5d0),_0x5ea960[_0x2d9506(0xe4)]=_0x58c5d0?_0x2d9506(0xd5):'light_mode',_0x54dddb[_0x2d9506(0xfc)]=_0x544d92||'',document[_0x2d9506(0xff)][_0x2d9506(0xf3)][_0x2d9506(0xfd)]('hide-header',_0x544d92),_0x54dddb[_0x2d9506(0xf0)](0x0,_0x54dddb[_0x2d9506(0xd7)]);},_0x55d41d=(_0x33b89e,..._0x5e70e9)=>{const _0x81fc54=_0x19364f,_0x16959b=document['createElement'](_0x81fc54(0xe6));return _0x16959b['classList'][_0x81fc54(0x10b)](_0x81fc54(0x10a),..._0x5e70e9),_0x16959b[_0x81fc54(0xfc)]=_0x33b89e,_0x16959b;},_0x42ab19=_0x53d3bc=>{const _0x575b83=_0x19364f;return _0x53d3bc['replace'](/\*\*(.*?)\*\*/g,_0x575b83(0xf1));},_0x967b60=(_0x5b8614,_0x231fa,_0x4da2d9)=>{const _0x1ada21=_0x19364f;_0x5b8614=_0x42ab19(_0x5b8614);const _0x5d8470=_0x5b8614[_0x1ada21(0xda)]('\x20');let _0x4d3300=0x0;const _0x30f76a=()=>{const _0x4375b5=_0x1ada21;_0x4d3300<_0x5d8470[_0x4375b5(0xdd)]?(_0x231fa['innerHTML']+=(_0x4d3300===0x0?'':'\x20')+_0x5d8470[_0x4d3300++],_0x4da2d9[_0x4375b5(0x106)]('.icon')[_0x4375b5(0xf3)][_0x4375b5(0x10b)](_0x4375b5(0x100)),!_0xc61148&&_0x54dddb[_0x4375b5(0xf0)](0x0,_0x54dddb[_0x4375b5(0xd7)]),requestAnimationFrame(_0x30f76a)):(_0x383cd4=![],_0x4da2d9[_0x4375b5(0x106)](_0x4375b5(0xe7))[_0x4375b5(0xf3)][_0x4375b5(0xe0)](_0x4375b5(0x100)),localStorage[_0x4375b5(0xf2)](_0x4375b5(0xea),_0x54dddb[_0x4375b5(0xfc)]));};requestAnimationFrame(_0x30f76a);},_0x2b19f2=async _0xab683b=>{const _0x3afc85=_0x19364f,_0x56fe59=_0xab683b[_0x3afc85(0x106)](_0x3afc85(0xd4));try{const _0x3b4b2d=await fetch(_0xccc5b8,{'method':'POST','headers':{'Content-Type':_0x3afc85(0xf6),'Authorization':'Bearer\x20'+_0x5c3310},'body':JSON['stringify']({'model':_0x3afc85(0x103),'messages':[{'role':_0x3afc85(0xcf),'content':_0x49da82}]})}),_0x2d796d=await _0x3b4b2d['json']();if(!_0x3b4b2d['ok'])throw new Error(_0x2d796d[_0x3afc85(0xd8)][_0x3afc85(0x10a)]);const _0x1062e8=_0x2d796d[_0x3afc85(0xdb)][0x0][_0x3afc85(0x10a)][_0x3afc85(0xef)];_0x967b60(_0x1062e8,_0x56fe59,_0xab683b);}catch(_0x40a424){_0x383cd4=![],_0x56fe59[_0x3afc85(0xe4)]=_0x40a424[_0x3afc85(0x10a)],_0x56fe59['parentElement'][_0x3afc85(0xd6)]('.message')[_0x3afc85(0xf3)][_0x3afc85(0x10b)](_0x3afc85(0xd8));}finally{_0xab683b[_0x3afc85(0xf3)][_0x3afc85(0xe0)](_0x3afc85(0xce));}},_0x3fe882=()=>{const _0x195ba0=_0x19364f,_0x323cfc='<div\x20class=\x22message-content\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20class=\x22avatar\x22\x20src=\x22images/bot.svg\x22\x20alt=\x22Gemini\x20avatar\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22text\x22></p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22loading-indicator\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22loading-bar\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22loading-bar\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22loading-bar\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20onClick=\x22copyMessage(this)\x22\x20class=\x22icon\x20material-symbols-rounded\x22>content_copy</span>',_0x542ae4=_0x55d41d(_0x323cfc,_0x195ba0(0xfb),_0x195ba0(0xce));_0x54dddb[_0x195ba0(0xed)](_0x542ae4),_0x54dddb[_0x195ba0(0xf0)](0x0,_0x54dddb[_0x195ba0(0xd7)]),_0x2b19f2(_0x542ae4);},_0x2ce76f=_0x228542=>{const _0x9ebc07=_0x19364f,_0x276fc2=_0x228542[_0x9ebc07(0xee)]['querySelector'](_0x9ebc07(0xd4))[_0x9ebc07(0xe4)];navigator['clipboard'][_0x9ebc07(0x101)](_0x276fc2),_0x228542[_0x9ebc07(0xe4)]=_0x9ebc07(0x107),setTimeout(()=>_0x228542[_0x9ebc07(0xe4)]=_0x9ebc07(0xeb),0x3e8);},_0x2346d1=()=>{const _0x10404b=_0x19364f;_0x49da82=_0xfb8def[_0x10404b(0x106)](_0x10404b(0x10c))['value'][_0x10404b(0xd9)]()||_0x49da82;if(!_0x49da82||_0x383cd4)return;_0x383cd4=!![];const _0x10bc06=_0x10404b(0xdc),_0xf6b680=_0x55d41d(_0x10bc06,_0x10404b(0xe1));_0xf6b680['querySelector']('.text')[_0x10404b(0xe4)]=_0x49da82,_0x54dddb[_0x10404b(0xed)](_0xf6b680),_0xfb8def[_0x10404b(0x104)](),document[_0x10404b(0xff)][_0x10404b(0xf3)][_0x10404b(0x10b)]('hide-header'),!_0xc61148&&_0x54dddb['scrollTo'](0x0,_0x54dddb['scrollHeight']),setTimeout(_0x3fe882,0x1f4);};_0x5ea960[_0x19364f(0x108)]('click',()=>{const _0x4e5b0f=_0x19364f,_0x57bbb5=document[_0x4e5b0f(0xff)][_0x4e5b0f(0xf3)]['toggle'](_0x4e5b0f(0xf7));localStorage[_0x4e5b0f(0xf2)](_0x4e5b0f(0x102),_0x57bbb5?'light_mode':'dark_mode'),_0x5ea960[_0x4e5b0f(0xe4)]=_0x57bbb5?_0x4e5b0f(0xd5):'light_mode';}),_0x5578c7[_0x19364f(0x108)](_0x19364f(0xd1),()=>{const _0x30b366=_0x19364f;confirm(_0x30b366(0xcd))&&(localStorage[_0x30b366(0x10d)]('saved-chats'),_0x288da9());}),_0x5b4a95[_0x19364f(0xfe)](_0x6f8d01=>{const _0x240268=_0x19364f;_0x6f8d01[_0x240268(0x108)](_0x240268(0xd1),()=>{const _0x43787c=_0x240268;_0x49da82=_0x6f8d01[_0x43787c(0x106)](_0x43787c(0xd4))[_0x43787c(0xe4)],_0x2346d1();});}),_0xfb8def[_0x19364f(0x108)](_0x19364f(0xd2),_0x23e499=>{const _0x5f59fd=_0x19364f;_0x23e499[_0x5f59fd(0xe8)](),_0x2346d1();}),_0x54dddb[_0x19364f(0x108)](_0x19364f(0x105),()=>{const _0x41f70f=_0x19364f;_0xc61148=_0x54dddb['scrollTop']+_0x54dddb[_0x41f70f(0xec)]<_0x54dddb['scrollHeight'];}),_0x288da9();}));
+document.addEventListener("DOMContentLoaded", () => {
+  const typingForm = document.querySelector(".typing-form");
+  const chatContainer = document.querySelector(".chat-list");
+  const suggestions = document.querySelectorAll(".suggestion");
+  const toggleThemeButton = document.querySelector("#theme-toggle-button");
+  const deleteChatButton = document.querySelector("#delete-chat-button");
+
+  // State variables
+  let userMessage = null;
+  let isResponseGenerating = false;
+  let isUserScrolledUp = false; // New variable to track user's scroll
+
+  // API configuration for Groq
+  const GROQ_API_KEY = "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"; // Replace with your actual Groq API key
+  const API_URL = "https://api.groq.com/openai/v1/chat/completions";
+
+  // Load theme and chat data from local storage on page load
+  const loadDataFromLocalstorage = () => {
+    const savedChats = localStorage.getItem("saved-chats");
+    const isLightMode = (localStorage.getItem("themeColor") === "light_mode");
+
+    // Apply the stored theme
+    document.body.classList.toggle("light_mode", isLightMode);
+    toggleThemeButton.innerText = isLightMode ? "dark_mode" : "light_mode";
+
+    // Restore saved chats or clear the chat container
+    chatContainer.innerHTML = savedChats || '';
+    document.body.classList.toggle("hide-header", savedChats);
+
+    chatContainer.scrollTo(0, chatContainer.scrollHeight); // Scroll to the bottom
+  }
+
+  // Create a new message element and return it
+  const createMessageElement = (content, ...classes) => {
+    const div = document.createElement("div");
+    div.classList.add("message", ...classes);
+    div.innerHTML = content;
+    return div;
+  }
+
+  // Bold text between stars (e.g., **bold text**) will be wrapped in <strong> tags
+  const boldTextWithStars = (text) => {
+    return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  }
+
+  // Show typing effect by displaying words one by one
+  const showTypingEffect = (text, textElement, incomingMessageDiv) => {
+    // Process text to bold parts between stars
+    text = boldTextWithStars(text);
+
+    const words = text.split(' ');
+    let currentWordIndex = 0;
+
+    const typingAnimation = () => {
+      if (currentWordIndex < words.length) {
+        // Append each word to the text element with a space
+        textElement.innerHTML += (currentWordIndex === 0 ? '' : ' ') + words[currentWordIndex++];
+        incomingMessageDiv.querySelector(".icon").classList.add("hide");
+
+        if (!isUserScrolledUp) { // Only scroll to the bottom if the user is not scrolled up
+          chatContainer.scrollTo(0, chatContainer.scrollHeight); // Scroll to the bottom
+        }
+
+        // Use requestAnimationFrame instead of setInterval
+        requestAnimationFrame(typingAnimation);
+      } else {
+        isResponseGenerating = false;
+        incomingMessageDiv.querySelector(".icon").classList.remove("hide");
+        localStorage.setItem("saved-chats", chatContainer.innerHTML); // Save chats to local storage
+      }
+    };
+
+    // Start the typing animation
+    requestAnimationFrame(typingAnimation);
+  }
+
+  // Fetch response from the Groq API based on user message
+  const generateAPIResponse = async (incomingMessageDiv) => {
+    const textElement = incomingMessageDiv.querySelector(".text"); // Getting text element
+
+    try {
+      // Send a POST request to the Groq API with the user's message
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${GROQ_API_KEY}`,
+        },
+        body: JSON.stringify({
+          model: "llama3-8b-8192",
+          messages: [{
+            role: "user",
+            content: userMessage,
+          }],
+        }),
+      });
+
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error.message);
+
+      // Get the API response text
+      const apiResponse = data.choices[0].message.content;
+      showTypingEffect(apiResponse, textElement, incomingMessageDiv); // Show typing effect
+    } catch (error) { // Handle error
+      isResponseGenerating = false;
+      textElement.innerText = error.message;
+      textElement.parentElement.closest(".message").classList.add("error");
+    } finally {
+      incomingMessageDiv.classList.remove("loading");
+    }
+  }
+
+  // Show a loading animation while waiting for the API response
+  const showLoadingAnimation = () => {
+    const html = `<div class="message-content">
+                    <img class="avatar" src="images/bot.svg" alt="Gemini avatar">
+                    <p class="text"></p>
+                    <div class="loading-indicator">
+                      <div class="loading-bar"></div>
+                      <div class="loading-bar"></div>
+                      <div class="loading-bar"></div>
+                    </div>
+                  </div>
+                  <span onClick="copyMessage(this)" class="icon material-symbols-rounded">content_copy</span>`;
+
+    const incomingMessageDiv = createMessageElement(html, "incoming", "loading");
+    chatContainer.appendChild(incomingMessageDiv);
+
+    chatContainer.scrollTo(0, chatContainer.scrollHeight); // Scroll to the bottom
+    generateAPIResponse(incomingMessageDiv);
+  }
+
+  // Copy message text to the clipboard
+  const copyMessage = (copyButton) => {
+    const messageText = copyButton.parentElement.querySelector(".text").innerText;
+
+    navigator.clipboard.writeText(messageText);
+    copyButton.innerText = "done"; // Show confirmation icon
+    setTimeout(() => copyButton.innerText = "content_copy", 1000); // Revert icon after 1 second
+  }
+
+  // Handle sending outgoing chat messages
+  const handleOutgoingChat = () => {
+    userMessage = typingForm.querySelector(".typing-input").value.trim() || userMessage;
+    if(!userMessage || isResponseGenerating) return; // Exit if there is no message or response is generating
+
+    isResponseGenerating = true;
+
+    const html = `<div class="message-content">
+                    <img class="avatar" src="images/e.svg" alt="User avatar">
+                    <p class="text"></p>
+                  </div>`;
+
+    const outgoingMessageDiv = createMessageElement(html, "outgoing");
+    outgoingMessageDiv.querySelector(".text").innerText = userMessage;
+    chatContainer.appendChild(outgoingMessageDiv);
+    
+    typingForm.reset(); // Clear input field
+    document.body.classList.add("hide-header");
+    if (!isUserScrolledUp) { // Only scroll to the bottom if the user is not scrolled up
+      chatContainer.scrollTo(0, chatContainer.scrollHeight); // Scroll to the bottom
+    }
+    setTimeout(showLoadingAnimation, 500); // Show loading animation after a delay
+  }
+
+  // Toggle between light and dark themes
+  toggleThemeButton.addEventListener("click", () => {
+    const isLightMode = document.body.classList.toggle("light_mode");
+    localStorage.setItem("themeColor", isLightMode ? "light_mode" : "dark_mode");
+    toggleThemeButton.innerText = isLightMode ? "dark_mode" : "light_mode";
+  });
+
+  // Delete all chats from local storage when button is clicked
+  deleteChatButton.addEventListener("click", () => {
+    if (confirm("Are you sure you want to delete all the chats?")) {
+      localStorage.removeItem("saved-chats");
+      loadDataFromLocalstorage();
+    }
+  });
+
+  // Set userMessage and handle outgoing chat when a suggestion is clicked
+  suggestions.forEach(suggestion => {
+    suggestion.addEventListener("click", () => {
+      userMessage = suggestion.querySelector(".text").innerText;
+      handleOutgoingChat();
+    });
+  });
+
+  // Prevent default form submission and handle outgoing chat
+  typingForm.addEventListener("submit", (e) => {
+    e.preventDefault(); 
+    handleOutgoingChat();
+  });
+
+  // Track if user is scrolled up
+  chatContainer.addEventListener('scroll', () => {
+    isUserScrolledUp = chatContainer.scrollTop + chatContainer.clientHeight < chatContainer.scrollHeight;
+  });
+
+  loadDataFromLocalstorage();
+});
