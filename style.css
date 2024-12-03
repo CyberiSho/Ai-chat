@@ -454,26 +454,27 @@ pre code {
 }
 
 
-/* افکت رنگ RGB برای متن */
 .disclaimer-text {
   font-size: 16px;
   font-weight: bold;
   text-align: center;
-  animation: rgb-effect 3s infinite; /* انیمیشن رنگ RGB */
+  background: linear-gradient(90deg, red, green, blue); /* استفاده از گرادیان RGB */
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* پر کردن متن با رنگ گرادیان */
+  animation: rgb-effect 3s infinite; /* انیمیشن گرادیان RGB */
 }
 
 @keyframes rgb-effect {
   0% {
-    color: red;
+    background-position: 0% 50%;
   }
-  33% {
-    color: green;
-  }
-  66% {
-    color: blue;
+  50% {
+    background-position: 100% 50%;
   }
   100% {
-    color: red;
+    background-position: 0% 50%;
   }
 }
 
