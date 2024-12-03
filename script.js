@@ -125,7 +125,7 @@ Your responses should reflect your emotional awareness, making users feel respec
   // Show a loading animation while waiting for the API response
   const showLoadingAnimation = () => {
     const html = `<div class="message-content">
-                    <img class="avatar" src="images/bot.svg" alt="Gemini avatar">
+                    <img class="avatar" src="images/bot.svg" alt="bot avatar">
                     <p class="text"></p>
                     <div class="loading-indicator">
                       <div class="loading-bar"></div>
@@ -159,7 +159,7 @@ Your responses should reflect your emotional awareness, making users feel respec
     isResponseGenerating = true;
 
     const html = `<div class="message-content">
-                    <img class="avatar" src="images/bot.svg" alt="User avatar">
+                    <img class="avatar" src="images/user.svg" alt="User avatar">
                     <p class="text"></p>
                   </div>`;
 
