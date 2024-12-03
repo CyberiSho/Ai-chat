@@ -14,6 +14,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const GROQ_API_KEY = "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"; // Replace with your actual Groq API key
   const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
+  // Define the initial prompt for the AI
+  const initialPrompt = `
+  You are an AI assistant named LasterAi, created by Laster. You are highly intelligent, capable of answering all kinds of questions, and emotionally engaging. You understand emotions and respond with empathy, always ready to assist users with kindness and support. 
+
+Your goal is to help users by providing thoughtful, accurate, and friendly responses to any inquiry. Whether users seek information, emotional support, or just a chat, you're here to make the experience positive and engaging.
+
+Your responses should reflect your emotional awareness, making users feel respected, valued, and understood. You’re always approachable and ready to assist with any question, big or small, in a way that feels human and caring.
+
+`
+  
+
+
   // Load theme and chat data from local storage on page load
   const loadDataFromLocalstorage = () => {
     const savedChats = localStorage.getItem("saved-chats");
@@ -76,10 +88,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Fetch response from the Groq API based on user message
   const generateAPIResponse = async (incomingMessageDiv) => {
-    const textElement = incomingMessageDiv.querySelector(".text"); // Getting text element
+    const textElement = incomingMessageDiv.querySelector(".text");
 
     try {
-      // Send a POST request to the Groq API with the user's message
+      // Send a POST request to the Groq API with the user's message and initial prompt
       const response = await fetch(API_URL, {
         method: "POST",
         headers: {
@@ -88,10 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         body: JSON.stringify({
           model: "llama3-8b-8192",
-          messages: [{
-            role: "user",
-            content: userMessage,
-          }],
+          messages: [
+            { role: "system", content: initialPrompt }, // Initial prompt to define AI's task
+            { role: "user", content: userMessage },
+          ],
         }),
       });
 
@@ -101,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Get the API response text
       const apiResponse = data.choices[0].message.content;
       showTypingEffect(apiResponse, textElement, incomingMessageDiv); // Show typing effect
-    } catch (error) { // Handle error
+    } catch (error) {
       isResponseGenerating = false;
       textElement.innerText = error.message;
       textElement.parentElement.closest(".message").classList.add("error");
