@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let isUserScrolledUp = false; // New variable to track user's scroll
 
   // API configuration for Groq
-  const GROQ_API_KEY = "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"; // Replace with your actual Groq API key
+  const GROQ_API_KEY = "";
   const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
   // Define the initial prompt for the AI
