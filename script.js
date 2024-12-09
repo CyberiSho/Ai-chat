@@ -159,7 +159,7 @@ Your responses should reflect your emotional awareness, making users feel respec
     isResponseGenerating = true;
 
     const html = `<div class="message-content">
-                    <img class="avatar" src="images/e.svg" alt="User avatar">
+                    <img class="avatar" src="images/user.svg" alt="User avatar">
                     <p class="text"></p>
                   </div>`;
 
