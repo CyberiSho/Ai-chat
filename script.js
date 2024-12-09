@@ -8,9 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // State variables
   let userMessage = null;
   let isResponseGenerating = false;
-  let isUserScrolledUp = false; 
-  const GROQ_API_KEY = process.env.GROQ_API_KEY;
+  let isUserScrolledUp = false; // New variable to track user's scroll
 
+  // API configuration for Groq
+  const GROQ_API_KEY = process.env.GROQ_API_KEY;
   const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
   // Define the initial prompt for the AI
@@ -30,6 +31,7 @@ Your responses should reflect your emotional awareness, making users feel respec
     const savedChats = localStorage.getItem("saved-chats");
     const isLightMode = (localStorage.getItem("themeColor") === "light_mode");
 
+    // Apply the stored theme
     document.body.classList.toggle("light_mode", isLightMode);
     toggleThemeButton.innerText = isLightMode ? "dark_mode" : "light_mode";
 
@@ -40,15 +42,20 @@ Your responses should reflect your emotional awareness, making users feel respec
     chatContainer.scrollTo(0, chatContainer.scrollHeight); // Scroll to the bottom
   }
 
+  // Create a new message element and return it
   const createMessageElement = (content, ...classes) => {
     const div = document.createElement("div");
     div.classList.add("message", ...classes);
     div.innerHTML = content;
     return div;
   }
+
+  // Bold text between stars (e.g., **bold text**) will be wrapped in <strong> tags
   const boldTextWithStars = (text) => {
     return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
   }
+
+  // Show typing effect by displaying words one by one
   const showTypingEffect = (text, textElement, incomingMessageDiv) => {
     // Process text to bold parts between stars
     text = boldTextWithStars(text);
@@ -58,13 +65,15 @@ Your responses should reflect your emotional awareness, making users feel respec
 
     const typingAnimation = () => {
       if (currentWordIndex < words.length) {
+        // Append each word to the text element with a space
         textElement.innerHTML += (currentWordIndex === 0 ? '' : ' ') + words[currentWordIndex++];
         incomingMessageDiv.querySelector(".icon").classList.add("hide");
 
         if (!isUserScrolledUp) { // Only scroll to the bottom if the user is not scrolled up
           chatContainer.scrollTo(0, chatContainer.scrollHeight); // Scroll to the bottom
         }
-        
+
+        // Use requestAnimationFrame instead of setInterval
         requestAnimationFrame(typingAnimation);
       } else {
         isResponseGenerating = false;
@@ -73,13 +82,16 @@ Your responses should reflect your emotional awareness, making users feel respec
       }
     };
 
+    // Start the typing animation
     requestAnimationFrame(typingAnimation);
   }
 
+  // Fetch response from the Groq API based on user message
   const generateAPIResponse = async (incomingMessageDiv) => {
     const textElement = incomingMessageDiv.querySelector(".text");
 
     try {
+      // Send a POST request to the Groq API with the user's message and initial prompt
       const response = await fetch(API_URL, {
         method: "POST",
         headers: {
@@ -98,6 +110,7 @@ Your responses should reflect your emotional awareness, making users feel respec
       const data = await response.json();
       if (!response.ok) throw new Error(data.error.message);
 
+      // Get the API response text
       const apiResponse = data.choices[0].message.content;
       showTypingEffect(apiResponse, textElement, incomingMessageDiv); // Show typing effect
     } catch (error) {
@@ -109,9 +122,10 @@ Your responses should reflect your emotional awareness, making users feel respec
     }
   }
 
+  // Show a loading animation while waiting for the API response
   const showLoadingAnimation = () => {
     const html = `<div class="message-content">
-                    <img class="avatar" src="images/bot.svg" alt="bot avatar">
+                    <img class="avatar" src="images/bot.svg" alt="Gemini avatar">
                     <p class="text"></p>
                     <div class="loading-indicator">
                       <div class="loading-bar"></div>
@@ -128,6 +142,7 @@ Your responses should reflect your emotional awareness, making users feel respec
     generateAPIResponse(incomingMessageDiv);
   }
 
+  // Copy message text to the clipboard
   const copyMessage = (copyButton) => {
     const messageText = copyButton.parentElement.querySelector(".text").innerText;
 
@@ -136,6 +151,7 @@ Your responses should reflect your emotional awareness, making users feel respec
     setTimeout(() => copyButton.innerText = "content_copy", 1000); // Revert icon after 1 second
   }
 
+  // Handle sending outgoing chat messages
   const handleOutgoingChat = () => {
     userMessage = typingForm.querySelector(".typing-input").value.trim() || userMessage;
     if(!userMessage || isResponseGenerating) return; // Exit if there is no message or response is generating
@@ -143,7 +159,7 @@ Your responses should reflect your emotional awareness, making users feel respec
     isResponseGenerating = true;
 
     const html = `<div class="message-content">
-                    <img class="avatar" src="images/user.svg" alt="User avatar">
+                    <img class="avatar" src="images/e.svg" alt="User avatar">
                     <p class="text"></p>
                   </div>`;
 
@@ -159,12 +175,14 @@ Your responses should reflect your emotional awareness, making users feel respec
     setTimeout(showLoadingAnimation, 500); // Show loading animation after a delay
   }
 
+  // Toggle between light and dark themes
   toggleThemeButton.addEventListener("click", () => {
     const isLightMode = document.body.classList.toggle("light_mode");
     localStorage.setItem("themeColor", isLightMode ? "light_mode" : "dark_mode");
     toggleThemeButton.innerText = isLightMode ? "dark_mode" : "light_mode";
   });
 
+  // Delete all chats from local storage when button is clicked
   deleteChatButton.addEventListener("click", () => {
     if (confirm("Are you sure you want to delete all the chats?")) {
       localStorage.removeItem("saved-chats");
@@ -172,6 +190,7 @@ Your responses should reflect your emotional awareness, making users feel respec
     }
   });
 
+  // Set userMessage and handle outgoing chat when a suggestion is clicked
   suggestions.forEach(suggestion => {
     suggestion.addEventListener("click", () => {
       userMessage = suggestion.querySelector(".text").innerText;
@@ -179,11 +198,13 @@ Your responses should reflect your emotional awareness, making users feel respec
     });
   });
 
+  // Prevent default form submission and handle outgoing chat
   typingForm.addEventListener("submit", (e) => {
     e.preventDefault(); 
     handleOutgoingChat();
   });
 
+  // Track if user is scrolled up
   chatContainer.addEventListener('scroll', () => {
     isUserScrolledUp = chatContainer.scrollTop + chatContainer.clientHeight < chatContainer.scrollHeight;
   });
