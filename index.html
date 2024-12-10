@@ -11,10 +11,34 @@
 
 </head>
 <body>
+
+
+  
+  <audio id="auto-play-audio" style="display:none;">
+    <source src="output.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
   <div class="sidebar">
     <h2></h2>
     <ul class="chat-history-list"></ul>
   </div>
+
+  <button id="toggle-button" class="toggle-button">☰</button>
+  <span class="material-symbols-rounded"></span>
+  <div id="slider" class="slider">
+    <div class="slider-content">
+      <h1 class="History">History</h1>
+      
+
+
+      <div class="action-buttons">
+        <span id="theme-toggle-button" class="icon material-symbols-rounded">light_mode</span>
+        <span id="delete-chat-button" class="icon material-symbols-rounded">delete</span>
+      </div>
+    </div>
+  </div>
+
 
   <div class="h">
   <header class="header">
@@ -46,17 +70,15 @@
 
   <div class="chat-container">
     <div class="chat-list"></div>
-
+    
     <div class="typing-area">
       <form action="#" class="typing-form">
         <div class="input-wrapper">
           <input type="text" placeholder="Enter a prompt here" class="typing-input" required />
           <button id="send-message-button" class="icon material-symbols-rounded">send</button>
         </div>
-        <div class="action-buttons">
-          <span id="theme-toggle-button" class="icon material-symbols-rounded">light_mode</span>
-          <span id="delete-chat-button" class="icon material-symbols-rounded">delete</span>
-        </div>
+        <span id="theme-toggle-button" class="icon material-symbols-rounded">mic</span>
+
       </form>
       <p class="disclaimer-text">
         LasterAI is in beta, mistakes,bugs,etc will fix in the few updates
@@ -69,6 +91,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-clike.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-csharp.min.js"></script>
+
+
 
 </body>
 </html>
