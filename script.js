@@ -236,5 +236,5 @@ toggleButton.addEventListener('click', () => {
   body.classList.toggle('open');
 });
 
-document.addEventListener("DOMContentLoaded", () => { document.body.style.zoom = "80%"; });
+document.addEventListener("DOMContentLoaded", () => { document.body.style.zoom = "90%"; });
 
