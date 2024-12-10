@@ -1,6 +1,8 @@
 /* Import Google Font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +21,7 @@
 }
 
 .light_mode {
+  /* Light mode colors */
   --text-color: #222;
   --subheading-color: #A0A0A0;
   --placeholder-color: #6C6C6C;
@@ -36,6 +39,8 @@ body {
   max-width: 980px;
 }
 
+
+
 .header {
   margin-top: 6vh;
   padding: 1rem;
@@ -46,6 +51,8 @@ body.hide-header .header {
   margin: 0;
   display: none;
 }
+
+
 
 
 .header :where(.title, .subtitle) {
@@ -209,7 +216,7 @@ body.hide-header .header {
   width: 100%;
   border-radius: 0.135rem;
   background: linear-gradient(90deg, #4285f4, #d96570, #1BA1E3);
-  background-size: 200% 200%;
+  background-size: 200% 200%; /* برای حرکت صاف */
   animation: loadingGradient 3s linear infinite;
 }
 
@@ -405,18 +412,18 @@ body.hide-header .header {
 
 
 code {
-  background-color: #f4f4f4;  
-  border-radius: 3px;       
-  padding: 0.2em 0.4em;      
-  font-family: "Courier New", monospace; 
-  font-size: 1.1em;           
-  color: #d6336c;             
+  background-color: #f4f4f4;  /* رنگ پس‌زمینه کد */
+  border-radius: 3px;         /* گوشه‌های گرد */
+  padding: 0.2em 0.4em;       /* فضای داخلی کد */
+  font-family: "Courier New", monospace; /* فونت کد */
+  font-size: 1.1em;            /* اندازه فونت کد */
+  color: #d6336c;              /* رنگ متن کد */
 }
 
 .chat-list .message .text {
   color: var(--text-color);
   white-space: pre-wrap;
-  overflow-x: auto; 
+  overflow-x: auto; /* Ensures long lines are scrollable */
 }
 
 pre code {
@@ -434,11 +441,11 @@ pre code {
   font-size: 1.2rem;
   font-weight: bold;
   background: linear-gradient(90deg, #4285f4, #d96570, #1BA1E3);
-  background-size: 200% 200%; /
+  background-size: 200% 200%; /* برای حرکت صاف */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientAnimation 3s ease infinite; 
+  animation: gradientAnimation 3s ease infinite; /* انیمیشن متحرک */
 }
 
 @keyframes gradientAnimation {
@@ -459,10 +466,10 @@ pre code {
   font-weight: bold; 
   text-align: center;
   background: linear-gradient(90deg, #4285f4, #d96570, #1BA1E3, #4285f4); 
-  background-size: 200% 200%; 
-  -webkit-background-clip: text;
+  background-size: 200% 200%;
+  -webkit-background-clip: text; 
   background-clip: text; 
-  -webkit-text-fill-color: transparent; 
+  -webkit-text-fill-color: transparent;
   animation: gradientAnimation 3s ease infinite; 
 }
 
@@ -476,6 +483,114 @@ pre code {
   100% {
     background-position: 0% 50%;
   }
+}
+
+
+.toggle-button {
+  position: absolute; /* تغییر موقعیت دکمه به صورت ثابت */
+  top: -15px; /* فاصله کمتر از بالای صفحه */
+  position: fixed;  /* ثابت نگه داشتن آیکون */
+  left: -10px; /* فاصله از چپ صفحه */
+  background: transparent; /* پس‌زمینه شفاف */
+  border: none; /* حذف حاشیه */
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1101; /* اطمینان از اینکه دکمه بالاتر از اسلایدر باشد */
+}
+
+
+/* اسلایدر برای دسکتاپ به صورت پیش‌فرض باز است */
+/* اسلایدر برای دسکتاپ به صورت پیش‌فرض باز است */
+.slider {
+  position: fixed;
+  top: 0;
+  left: 0; /* اسلایدر روی صفحه ظاهر می‌شود */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  overflow: hidden;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+/* وقتی صفحه کوچکتر از 768px است (گوشی موبایل) اسلایدر بسته می‌شود */
+@media (max-width: 1150px) {
+  .slider {
+    left: -250px; /* اسلایدر خارج از صفحه قرار می‌گیرد */
+  }
+}
+
+
+
+.slider-content {
+  padding: 20px;
+  padding-top: 60px; /* فاصله بیشتر در بالای محتویات */
+}
+
+
+/* محتوای اصلی صفحه */
+.main-content {
+  padding: 20px;
+  transition: margin-left 0.3s ease; /* فضای خالی در سمت چپ برای اسلایدر */
+}
+
+/* زمانی که اسلایدر باز می‌شود */
+body.open .slider {
+  left: 0; /* اسلایدر به سمت راست می‌آید */
+}
+
+body.open .main-content {
+  margin-left: 250px; /* محتوای اصلی به اندازه عرض اسلایدر به سمت راست حرکت می‌کند */
+}
+
+
+.action-buttons {
+  position: absolute; /* این ویژگی آیکون‌ها را در پایین اسلایدر قرار می‌دهد */
+  bottom: 10px; /* افزایش این مقدار برای پایین بردن آیکون‌ها */
+  left: 50%; /* به مرکز افقی اسلایدر می‌آید */
+  transform: translateX(-50%); /* برای درست مرکز شدن آیکون‌ها */
+}
+
+.action-buttons span {
+  font-size: 30px;
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.History {
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(90deg, #4285f4, #d96570, #1BA1E3, #4285f4);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 3s ease infinite;
+  
+  /* حرکت دادن متن به سمت بالا */
+  transform: translateY(-30px); /* این مقدار را برای جابجایی بیشتر یا کمتر تنظیم کنید */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+html, body {
+  overflow: hidden; /* جلوگیری از اسکرول افقی و عمودی */
+  height: 100%; /* اطمینان از اینکه کل صفحه با ارتفاع 100 درصد نمایش داده شود */
 }
 
 
