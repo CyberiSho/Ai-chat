@@ -223,3 +223,18 @@ function typeWriter() {
     }
 }
 typeWriter();
+
+window.onload = function() {
+  var audioElement = document.getElementById('auto-play-audio');
+  audioElement.play();  // Play the audio as soon as the page loads
+};
+
+const toggleButton = document.getElementById('toggle-button');
+const body = document.body;
+
+toggleButton.addEventListener('click', () => {
+  body.classList.toggle('open');
+});
+
+document.addEventListener("DOMContentLoaded", () => { document.body.style.zoom = "80%"; });
+
